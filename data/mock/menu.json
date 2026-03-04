@@ -1,0 +1,295 @@
+{
+  "data": {
+    "nodeMenuItems": {
+      "__typename": "NodeMenuItemConnection",
+      "nodes": [
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-sourdough",
+          "title": "Country Sourdough Loaf",
+          "path": "/menu/country-sourdough",
+          "body": {
+            "processed": "<p>Our signature sourdough is made with a 15-year-old starter and a 36-hour fermentation process. The result is a beautifully blistered crust with a tangy, open crumb that's perfect for everything from toast to charcuterie boards. Available whole or sliced.</p>",
+            "summary": "Our signature sourdough is made with a 15-year-old starter and a 36-hour fermentation process. The result is a beautifully blistered crust with a tangy, open crumb that's perfect for everything from t"
+          },
+          "price": "$8.50",
+          "menuCategory": [
+            {
+              "id": "breads",
+              "name": "breads"
+            }
+          ],
+          "dietaryInfo": [
+            "Vegan"
+          ],
+          "isFeatured": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
+            "alt": "Rustic sourdough loaf with golden crust",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-croissant",
+          "title": "Classic Butter Croissant",
+          "path": "/menu/butter-croissant",
+          "body": {
+            "processed": "<p>Our croissants are made the French way — with European-style butter, laminated by hand over three days. Each one features 81 flaky layers, a shattering golden exterior, and a soft, buttery interior. Arrive early — they sell out fast.</p>",
+            "summary": "Our croissants are made the French way — with European-style butter, laminated by hand over three days. Each one features 81 flaky layers, a shattering golden exterior, and a soft, buttery interior. A"
+          },
+          "price": "$4.50",
+          "menuCategory": [
+            {
+              "id": "pastries",
+              "name": "pastries"
+            }
+          ],
+          "dietaryInfo": [
+            "Contains Dairy",
+            "Contains Gluten"
+          ],
+          "isFeatured": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+            "alt": "Flaky butter croissant on parchment paper",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-chocolate-cake",
+          "title": "Dark Chocolate Layer Cake",
+          "path": "/menu/dark-chocolate-cake",
+          "body": {
+            "processed": "<p>Three layers of rich, moist chocolate cake made with Valrhona cocoa, filled and frosted with dark chocolate ganache. This indulgent cake is our most requested celebration cake and is available by the slice in the cafe or as a whole cake for special orders.</p>",
+            "summary": "Three layers of rich, moist chocolate cake made with Valrhona cocoa, filled and frosted with dark chocolate ganache. This indulgent cake is our most requested celebration cake and is available by the "
+          },
+          "price": "$7.50 / slice",
+          "menuCategory": [
+            {
+              "id": "cakes",
+              "name": "cakes"
+            }
+          ],
+          "dietaryInfo": [
+            "Contains Dairy",
+            "Contains Eggs"
+          ],
+          "isFeatured": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
+            "alt": "Rich dark chocolate layer cake with ganache frosting",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-almond-biscotti",
+          "title": "Almond Biscotti",
+          "path": "/menu/almond-biscotti",
+          "body": {
+            "processed": "<p>Crisp, twice-baked Italian cookies studded with toasted Marcona almonds and a hint of orange zest. The perfect companion to your morning coffee or afternoon espresso. Dipped in white chocolate on one end.</p>",
+            "summary": "Crisp, twice-baked Italian cookies studded with toasted Marcona almonds and a hint of orange zest. The perfect companion to your morning coffee or afternoon espresso. Dipped in white chocolate on one "
+          },
+          "price": "$3.00",
+          "menuCategory": [
+            {
+              "id": "cookies",
+              "name": "cookies"
+            }
+          ],
+          "dietaryInfo": [
+            "Contains Nuts",
+            "Contains Eggs"
+          ],
+          "isFeatured": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+            "alt": "Almond biscotti dipped in white chocolate",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-avocado-toast",
+          "title": "Avocado Toast",
+          "path": "/menu/avocado-toast",
+          "body": {
+            "processed": "<p>Smashed avocado on thick-cut sourdough toast, topped with everything seasoning, pickled red onion, microgreens, and a squeeze of lemon. Add a poached egg for $2 or smoked salmon for $4.</p>",
+            "summary": "Smashed avocado on thick-cut sourdough toast, topped with everything seasoning, pickled red onion, microgreens, and a squeeze of lemon. Add a poached egg for $2 or smoked salmon for $4."
+          },
+          "price": "$10.00",
+          "menuCategory": [
+            {
+              "id": "breakfast",
+              "name": "breakfast"
+            }
+          ],
+          "dietaryInfo": [
+            "Vegan (base)"
+          ],
+          "isFeatured": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800&q=80",
+            "alt": "Avocado toast on sourdough with toppings",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-latte",
+          "title": "Oat Milk Latte",
+          "path": "/menu/oat-milk-latte",
+          "body": {
+            "processed": "<p>Our house espresso blend pulled as a double shot and topped with steamed oat milk for a creamy, plant-based latte. Available hot or iced. We use locally roasted beans from partner roaster Daybreak Coffee.</p>",
+            "summary": "Our house espresso blend pulled as a double shot and topped with steamed oat milk for a creamy, plant-based latte. Available hot or iced. We use locally roasted beans from partner roaster Daybreak Cof"
+          },
+          "price": "$5.50",
+          "menuCategory": [
+            {
+              "id": "coffee-drinks",
+              "name": "coffee-drinks"
+            }
+          ],
+          "dietaryInfo": [
+            "Vegan",
+            "Dairy-Free"
+          ],
+          "isFeatured": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80",
+            "alt": "Oat milk latte with latte art in ceramic cup",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

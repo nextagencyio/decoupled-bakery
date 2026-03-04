@@ -1,0 +1,284 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Bakery homepage with hero, stats, featured items, and CTA",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "menu_item",
+      "label": "Menu Item",
+      "description": "Bakery items, pastries, and cafe drinks",
+      "body": true,
+      "fields": [
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "menu_category", "label": "Category", "type": "term(menu_categories)[]" },
+        { "id": "dietary_info", "label": "Dietary Info", "type": "string[]" },
+        { "id": "is_featured", "label": "Featured Item", "type": "bool" },
+        { "id": "image", "label": "Item Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "special",
+      "label": "Special",
+      "description": "Weekly specials, seasonal offerings, and limited-time items",
+      "body": true,
+      "fields": [
+        { "id": "start_date", "label": "Start Date", "type": "datetime" },
+        { "id": "end_date", "label": "End Date", "type": "datetime" },
+        { "id": "special_type", "label": "Special Type", "type": "term(special_types)[]" },
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "image", "label": "Special Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vocabulary": "menu_categories",
+      "label": "Menu Categories",
+      "terms": ["Breads", "Pastries", "Cakes", "Cookies", "Sandwiches", "Coffee & Drinks", "Breakfast"]
+    },
+    {
+      "vocabulary": "special_types",
+      "label": "Special Types",
+      "terms": ["Weekly Special", "Seasonal", "Holiday", "Limited Edition"]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-baked",
+      "type": "paragraph.stat_item",
+      "values": { "number": "500+", "label": "Items Baked Daily" }
+    },
+    {
+      "id": "stat-recipes",
+      "type": "paragraph.stat_item",
+      "values": { "number": "80+", "label": "Original Recipes" }
+    },
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "15", "label": "Years in Business" }
+    },
+    {
+      "id": "stat-rating",
+      "type": "paragraph.stat_item",
+      "values": { "number": "4.8", "label": "Google Rating" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Welcome to Flour & Fold Bakery",
+        "hero_title": "Baked Fresh Every Morning",
+        "hero_subtitle": "Artisan Bakery & Neighborhood Cafe",
+        "hero_description": "<p>At Flour & Fold, we believe the best things in life are made from scratch. Every loaf, pastry, and cake is handcrafted using time-honored techniques, premium ingredients, and a whole lot of love. Stop by for a fresh-baked treat and a perfectly pulled espresso.</p>",
+        "stats_items": ["@stat-baked", "@stat-recipes", "@stat-years", "@stat-rating"],
+        "featured_items_title": "Bakery Favorites",
+        "cta_title": "Place a Custom Order",
+        "cta_description": "<p>From birthday cakes to wedding dessert tables, our pastry team creates stunning custom creations for every occasion. Place your order at least 48 hours in advance.</p>",
+        "cta_primary": "Order Now",
+        "cta_secondary": "View Full Menu"
+      }
+    },
+    {
+      "id": "item-sourdough",
+      "type": "node.menu_item",
+      "path": "/menu/country-sourdough",
+      "values": {
+        "title": "Country Sourdough Loaf",
+        "body": "<p>Our signature sourdough is made with a 15-year-old starter and a 36-hour fermentation process. The result is a beautifully blistered crust with a tangy, open crumb that's perfect for everything from toast to charcuterie boards. Available whole or sliced.</p>",
+        "price": "$8.50",
+        "menu_category": ["breads"],
+        "dietary_info": ["Vegan"],
+        "is_featured": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
+          "alt": "Rustic sourdough loaf with golden crust"
+        }
+      }
+    },
+    {
+      "id": "item-croissant",
+      "type": "node.menu_item",
+      "path": "/menu/butter-croissant",
+      "values": {
+        "title": "Classic Butter Croissant",
+        "body": "<p>Our croissants are made the French way — with European-style butter, laminated by hand over three days. Each one features 81 flaky layers, a shattering golden exterior, and a soft, buttery interior. Arrive early — they sell out fast.</p>",
+        "price": "$4.50",
+        "menu_category": ["pastries"],
+        "dietary_info": ["Contains Dairy", "Contains Gluten"],
+        "is_featured": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+          "alt": "Flaky butter croissant on parchment paper"
+        }
+      }
+    },
+    {
+      "id": "item-chocolate-cake",
+      "type": "node.menu_item",
+      "path": "/menu/dark-chocolate-cake",
+      "values": {
+        "title": "Dark Chocolate Layer Cake",
+        "body": "<p>Three layers of rich, moist chocolate cake made with Valrhona cocoa, filled and frosted with dark chocolate ganache. This indulgent cake is our most requested celebration cake and is available by the slice in the cafe or as a whole cake for special orders.</p>",
+        "price": "$7.50 / slice",
+        "menu_category": ["cakes"],
+        "dietary_info": ["Contains Dairy", "Contains Eggs"],
+        "is_featured": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
+          "alt": "Rich dark chocolate layer cake with ganache frosting"
+        }
+      }
+    },
+    {
+      "id": "item-almond-biscotti",
+      "type": "node.menu_item",
+      "path": "/menu/almond-biscotti",
+      "values": {
+        "title": "Almond Biscotti",
+        "body": "<p>Crisp, twice-baked Italian cookies studded with toasted Marcona almonds and a hint of orange zest. The perfect companion to your morning coffee or afternoon espresso. Dipped in white chocolate on one end.</p>",
+        "price": "$3.00",
+        "menu_category": ["cookies"],
+        "dietary_info": ["Contains Nuts", "Contains Eggs"],
+        "is_featured": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+          "alt": "Almond biscotti dipped in white chocolate"
+        }
+      }
+    },
+    {
+      "id": "item-avocado-toast",
+      "type": "node.menu_item",
+      "path": "/menu/avocado-toast",
+      "values": {
+        "title": "Avocado Toast",
+        "body": "<p>Smashed avocado on thick-cut sourdough toast, topped with everything seasoning, pickled red onion, microgreens, and a squeeze of lemon. Add a poached egg for $2 or smoked salmon for $4.</p>",
+        "price": "$10.00",
+        "menu_category": ["breakfast"],
+        "dietary_info": ["Vegan (base)"],
+        "is_featured": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800&q=80",
+          "alt": "Avocado toast on sourdough with toppings"
+        }
+      }
+    },
+    {
+      "id": "item-latte",
+      "type": "node.menu_item",
+      "path": "/menu/oat-milk-latte",
+      "values": {
+        "title": "Oat Milk Latte",
+        "body": "<p>Our house espresso blend pulled as a double shot and topped with steamed oat milk for a creamy, plant-based latte. Available hot or iced. We use locally roasted beans from partner roaster Daybreak Coffee.</p>",
+        "price": "$5.50",
+        "menu_category": ["coffee-drinks"],
+        "dietary_info": ["Vegan", "Dairy-Free"],
+        "is_featured": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80",
+          "alt": "Oat milk latte with latte art in ceramic cup"
+        }
+      }
+    },
+    {
+      "id": "special-spring-scones",
+      "type": "node.special",
+      "path": "/specials/lemon-lavender-scones",
+      "values": {
+        "title": "Lemon Lavender Scones",
+        "body": "<p>Welcome spring with our limited-edition Lemon Lavender Scones. Made with fresh lemon zest, culinary lavender, and topped with a tart lemon glaze. Light, fragrant, and absolutely perfect with a cup of Earl Grey tea. Available while supplies last.</p>",
+        "start_date": "2026-03-15T00:00:00",
+        "end_date": "2026-05-31T23:59:59",
+        "special_type": ["seasonal"],
+        "price": "$4.00",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+          "alt": "Lemon lavender scones with glaze on a plate"
+        }
+      }
+    },
+    {
+      "id": "special-mothers-day",
+      "type": "node.special",
+      "path": "/specials/mothers-day-cake",
+      "values": {
+        "title": "Mother's Day Celebration Cake",
+        "body": "<p>Surprise Mom with our stunning Mother's Day Celebration Cake. Layers of vanilla bean sponge, fresh strawberry compote, and rose-scented buttercream, decorated with edible flowers and gold leaf. Pre-order only — limited quantities available.</p><h2>Sizes Available</h2><ul><li>6-inch (serves 8) - $45</li><li>8-inch (serves 12) - $65</li><li>10-inch (serves 20) - $85</li></ul>",
+        "start_date": "2026-04-15T00:00:00",
+        "end_date": "2026-05-10T23:59:59",
+        "special_type": ["holiday"],
+        "price": "From $45",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=800&q=80",
+          "alt": "Elegant celebration cake decorated with fresh flowers"
+        }
+      }
+    },
+    {
+      "id": "special-sourdough-pizza",
+      "type": "node.special",
+      "path": "/specials/friday-pizza-night",
+      "values": {
+        "title": "Friday Night Sourdough Pizza",
+        "body": "<p>Every Friday from 5-8 PM, we fire up our wood-burning oven for Sourdough Pizza Night. Our naturally leavened dough is made with the same starter as our famous sourdough bread, topped with locally sourced ingredients. Menu rotates weekly — follow us on social media for this week's selections.</p><h2>This Week's Menu</h2><ul><li>Margherita: San Marzano tomato, fresh mozzarella, basil</li><li>Mushroom & Gruy&egrave;re: Wild mushrooms, Gruy&egrave;re, thyme, truffle oil</li><li>Sausage & Peppers: House-made sausage, roasted peppers, chili flakes</li></ul>",
+        "start_date": "2026-03-06T17:00:00",
+        "end_date": "2026-09-25T20:00:00",
+        "special_type": ["weekly-special"],
+        "price": "$14-$18",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
+          "alt": "Wood-fired sourdough pizza fresh from the oven"
+        }
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Flour & Fold",
+        "body": "<p>Flour & Fold Bakery was born in 2011 from a simple belief: that a neighborhood deserves a bakery that bakes everything from scratch, every single day. What started as baker Elena Vasquez's weekend farmer's market booth has grown into a beloved community gathering place.</p><h2>Our Approach</h2><p>We use no shortcuts. Our bread doughs ferment for up to 36 hours. Our croissants are laminated by hand over three days. Our cakes are frosted to order. We source organic flour from regional mills, free-range eggs from local farms, and European-style butter for our pastries.</p><h2>The Cafe</h2><p>Beyond the bakery counter, our cafe serves espresso drinks using locally roasted beans, plus a simple breakfast and lunch menu built around our fresh-baked bread. It's a place to slow down, enjoy something made with care, and feel at home.</p><h2>Hours</h2><p><strong>Bakery & Cafe:</strong> Tuesday - Sunday, 7:00 AM - 4:00 PM<br/><strong>Friday Pizza Night:</strong> 5:00 PM - 8:00 PM<br/><strong>Closed Monday</strong></p>"
+      }
+    },
+    {
+      "id": "page-catering",
+      "type": "node.page",
+      "path": "/catering",
+      "values": {
+        "title": "Catering & Custom Orders",
+        "body": "<h2>Custom Cakes</h2><p>Our pastry team creates custom cakes for birthdays, weddings, anniversaries, and every celebration in between. We offer a range of flavors, fillings, and decorating styles, from elegant buttercream to modern fondant designs. Tastings available by appointment.</p><h2>Event Catering</h2><p>Let us supply the baked goods for your next meeting, party, or event. We offer pastry platters, bread baskets, sandwich trays, cookie boxes, and dessert tables. Minimum 48-hour notice required for catering orders.</p><h2>Catering Menu</h2><ul><li><strong>Pastry Platter</strong> (serves 10-12): $45 — Assorted croissants, muffins, and scones</li><li><strong>Sandwich Tray</strong> (serves 10): $75 — Selection of gourmet sandwiches on house-baked bread</li><li><strong>Cookie Box</strong> (2 dozen): $36 — Mix of chocolate chip, oatmeal raisin, and snickerdoodle</li><li><strong>Bread Basket</strong> (serves 8-10): $28 — Sourdough, multigrain, and focaccia with herb butter</li></ul><h2>How to Order</h2><p>Call us at (555) 867-5309 or email catering@flourandfold.com. Orders must be placed at least 48 hours in advance. Custom cake consultations available by appointment.</p>"
+      }
+    }
+  ]
+}

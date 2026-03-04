@@ -1,0 +1,71 @@
+import { Metadata } from 'next'
+import { headers } from 'next/headers'
+import { getServerApolloClient } from '@/lib/apollo-client'
+import { GET_MENU_ITEMS } from '@/lib/queries'
+import { MenuItemsData } from '@/lib/types'
+import Header from '../components/Header'
+import MenuItemCard from '../components/MenuItemCard'
+
+export const revalidate = 3600
+
+export const metadata: Metadata = {
+  title: 'Menu | Golden Crust Bakery',
+  description: 'Browse our freshly baked menu items.',
+}
+
+async function getMenuItems() {
+  try {
+    const requestHeaders = await headers()
+    const apolloClient = getServerApolloClient(requestHeaders)
+    const { data } = await apolloClient.query<MenuItemsData>({
+      query: GET_MENU_ITEMS,
+      variables: { first: 50 },
+      fetchPolicy: 'cache-first',
+    })
+    return data?.nodeMenuItems?.nodes || []
+  } catch (error) {
+    console.error('Error fetching menu items:', error)
+    return []
+  }
+}
+
+export default async function MenuItemsPage() {
+  const items = await getMenuItems()
+
+  return (
+    <div className="min-h-screen bg-[#faf8f5]">
+      <Header />
+
+      <section className="bg-[#faf8f5] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-4">
+              Our Menu
+            </h1>
+            <div className="w-24 h-0.5 bg-primary-600 mx-auto mb-6" />
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Freshly baked every morning with the finest ingredients.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-[#faf8f5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {items.length === 0 ? (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-serif font-semibold text-gray-600 mb-2">No Menu Items Yet</h2>
+              <p className="text-gray-500">Menu items will appear here once content is imported.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {items.map((item) => (
+                <MenuItemCard key={item.id} item={item} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
+  )
+}
