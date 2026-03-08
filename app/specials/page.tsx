@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import SpecialCard from '../components/SpecialCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Specials | Golden Crust Bakery',
