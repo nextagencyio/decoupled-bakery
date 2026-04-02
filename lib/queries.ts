@@ -82,11 +82,11 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
+        heroDescription { processed }
+        statsItems { ... on ParagraphStatItem { id number label } }
         featuredItemsTitle
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -139,16 +139,12 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
-            featuresItems {
-              ... on ParagraphFeatureItem {
+            featuredItemsTitle
+            statsItems {
+              ... on ParagraphStatItem {
                 id
-                title
-                description {
-                  processed
-                }
-                icon
+                number
+                label
               }
             }
             ctaTitle
@@ -175,7 +171,7 @@ export const GET_MENU_ITEMS = gql`
         ... on NodeMenuItem {
           body { processed summary }
           price
-          menuCategory
+          menuCategory { ... on TermMenuCategory { name } }
           dietaryInfo
           isFeatured
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
@@ -196,7 +192,7 @@ export const GET_MENU_ITEM_BY_PATH = gql`
             path
           body { processed summary }
           price
-          menuCategory
+          menuCategory { ... on TermMenuCategory { name } }
           dietaryInfo
           isFeatured
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
@@ -219,7 +215,7 @@ export const GET_SPECIALS = gql`
           body { processed summary }
           startDate { timestamp }
           endDate { timestamp }
-          specialType
+          specialType { ... on TermSpecialType { name } }
           price
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
@@ -240,7 +236,7 @@ export const GET_SPECIAL_BY_PATH = gql`
           body { processed summary }
           startDate { timestamp }
           endDate { timestamp }
-          specialType
+          specialType { ... on TermSpecialType { name } }
           price
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
