@@ -118,7 +118,7 @@ This imports:
 Edit `tailwind.config.js` to customize colors, fonts, and spacing.
 
 ### Content Structure
-Modify `data/bakery-content.json` to add or change content types and sample content.
+Modify `data/components-content.json` to add or change content types and sample content.
 
 ### Components
 React components are in `app/components/`. Update them to match your design needs.

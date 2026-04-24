@@ -135,7 +135,7 @@ export default function ContentSetupGuide({ drupalBaseUrl }: ContentSetupGuidePr
                     <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
                     <div>
                       <span>Open </span>
-                      <code className="bg-gray-200 px-1 rounded">data/starter-content.json</code>
+                      <code className="bg-gray-200 px-1 rounded">data/components-content.json</code>
                       <span> in this project and copy its contents</span>
                     </div>
                   </li>
@@ -194,7 +194,7 @@ export default function ContentSetupGuide({ drupalBaseUrl }: ContentSetupGuidePr
 
           <div className="text-center">
             <p className="text-sm text-gray-500">
-              The JSON file at <code className="bg-gray-100 px-1 rounded">data/starter-content.json</code> defines
+              The JSON file at <code className="bg-gray-100 px-1 rounded">data/components-content.json</code> defines
               your content types and sample content. You can customize it for your project.
             </p>
           </div>
