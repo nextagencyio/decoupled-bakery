@@ -11,9 +11,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "npx decoupled-cli@latest setup --content data/bakery-content.json",
-    "setup-content": "npx decoupled-cli@latest content import --file data/bakery-content.json",
-    "setup-content:preview": "npx decoupled-cli@latest content import --file data/bakery-content.json --preview",
+    "setup": "npx decoupled-cli@latest setup --content data/components-content.json",
+    "setup-content": "npx decoupled-cli@latest content import --file data/components-content.json",
+    "setup-content:preview": "npx decoupled-cli@latest content import --file data/components-content.json --preview",
     "build:cloudflare": "opennextjs-cloudflare build",
     "sync-schema": "npx decoupled-cli@latest schema sync"
   },
@@ -29,6 +29,7 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.14.5",
     "@opennextjs/cloudflare": "^1.17.1",
     "@playwright/test": "^1.59.1",
     "@types/node": "^22",

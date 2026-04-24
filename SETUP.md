@@ -36,7 +36,7 @@ If you prefer to import manually or need to customize the content:
 
 ### Step 1: Copy the JSON
 
-Open `data/starter-content.json` in this project and copy its contents.
+Open `data/components-content.json` in this project and copy its contents.
 
 ### Step 2: Open the Import Page
 
@@ -72,7 +72,7 @@ The starter content includes:
 
 ## Customizing the Content
 
-The content definition lives in `data/starter-content.json`. You can:
+The content definition lives in `data/components-content.json`. You can:
 
 1. **Modify existing content types** - Add/remove fields
 2. **Add new content types** - Follow the same JSON structure
